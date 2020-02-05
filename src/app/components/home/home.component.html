@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Paises</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4" *ngFor="let item of paises">
+            <div class="card mb-3">
+                <img src="{{ item.flag }}" class="card-img-top" alt="{{ item.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <div>
+                        <span class="badge badge-primary ml-2" *ngFor="let lang of item.languages">{{ lang.nativeName }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
